@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-public class HttpTransport: ClientTransportProtocol {
+open class HttpTransport: ClientTransportProtocol {
 
     public var name: String? {
         return ""

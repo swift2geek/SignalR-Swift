@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-public class LongPollingTransport: HttpTransport {
+open class LongPollingTransport: HttpTransport {
     var reconnectDelay = 5.0
     var errorDelay = 2.0
     var pollingQueue = DispatchQueue(label: "com.autosoftdms.SignalR-Swift.serial")
