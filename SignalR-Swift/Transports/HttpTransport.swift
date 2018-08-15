@@ -21,6 +21,8 @@ open class HttpTransport: ClientTransportProtocol {
 
     var startedAbort: Bool = false
 
+    public init() {}
+
     public func negotiate(connection: ConnectionProtocol, connectionData: String?, completionHandler: ((NegotiationResponse?, Error?) -> ())?) {
         let url = connection.url.appending("negotiate")
 

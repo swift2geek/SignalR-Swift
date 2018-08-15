@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class HubProxy: HubProxyProtocol {
+open class HubProxy: HubProxyProtocol {
 
     public var state = [String: Any]()
 
