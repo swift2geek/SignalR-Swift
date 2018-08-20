@@ -14,7 +14,7 @@ private let kMethod = "M"
 private let kArgs = "A"
 private let kState = "S"
 
-struct HubInvocation {
+public struct HubInvocation {
 
     let callbackId: String
     let hub: String
