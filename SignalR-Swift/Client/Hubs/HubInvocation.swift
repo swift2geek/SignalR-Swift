@@ -22,7 +22,7 @@ public struct HubInvocation {
     let args: [Any]
     let state: [String: Any]
     
-    init(callbackId: String, hub: String, method: String, args: [Any], state: [String: Any] = [:]) {
+    public init(callbackId: String, hub: String, method: String, args: [Any], state: [String: Any] = [:]) {
         self.callbackId = callbackId
         self.hub = hub
         self.method = method
@@ -30,7 +30,7 @@ public struct HubInvocation {
         self.state = state
     }
     
-    init(jsonObject dict: [String: Any]) {
+    public init(jsonObject dict: [String: Any]) {
         callbackId = dict[kCallbackId] as? String ?? ""
         hub = dict[kHub] as? String ?? ""
         method = dict[kMethod] as? String ?? ""
@@ -38,7 +38,7 @@ public struct HubInvocation {
         state = dict[kState] as? [String: Any] ?? [:]
     }
 
-    func toJSONString() -> String? {
+    public func toJSONString() -> String? {
         let json: [String: Any] = [
             kCallbackId: callbackId,
             kHub: hub,
